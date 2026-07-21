@@ -1,0 +1,18 @@
+Uni 3function decodificar() {
+const numero = document.getElementById('numero').value;
+const resultado = document.getElementById('resultado');
+
+if(numero === '') {
+resultado.innerHTML = '<p style="color:red">Escribe un número primero</p>';
+return;
+}
+
+const suma = numero.split('').reduce((a, b) => a + parseInt(b), 0);
+const raiz = Math.sqrt(suma).toFixed(2);
+let dinero = suma * 341;
+let dominio = suma % 7;
+
+resultado.innerHTML = &lt;h3&gt;Resultado para: ${numero}</h3>
+<p><b>Dinero:</b> ${dinero}&lt;/p&gt; &lt;p&gt;&lt;b&gt;Raíz:&lt;/b&gt; ${raiz}</p>
+<p><b>Dominio:</b> Nivel ${dominio}&lt;/p&gt; &lt;p&gt;&lt;b&gt;Clave:&lt;/b&gt; 341261 activada&lt;/p&gt;;
+}
